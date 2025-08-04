@@ -1,0 +1,76 @@
+* {
+  font-family: "Geist", sans-serif;
+}
+
+.slider {
+  position: relative;
+}
+
+.slide-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  opacity: 0;
+}
+.slide-wrapper.is-current {
+  z-index: 1;
+  opacity: 1;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.dot.active {
+  background: white;
+}
+
+* {
+  font-family: "Geist", sans-serif;
+  font-weight: 400;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #1b1b1b;
+  color: white;
+  margin: 2rem;
+}
+h1 {
+  margin-bottom: 1rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+li {
+  background: #333;
+  margin-bottom: 0.75rem;
+  padding: 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+li:hover {
+  background: #555;
+}
+a {
+  color: #ffba20;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+  display: block;
+}
+small {
+  display: block;
+  margin-top: 0.25rem;
+  color: #ccc;
+  font-weight: normal;
+}

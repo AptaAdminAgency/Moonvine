@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#1b1b1b] relative">
+    <div
+      class="bg-[#1b1b1b] absolute h-full w-full top-0 bottom-0 left-0 right-0 z-1000 flex items-center justify-center"
+      id="loading"
+    >
+      <script
+        src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"
+        type="module"
+      ></script>
+      <dotlottie-wc
+        src="https://lottie.host/e44e7058-8d9d-4872-b269-ff7958e0cf77/ogSWaKMPqa.lottie"
+        style="width: 340px; height: 340px"
+        speed="1"
+        autoplay
+        loop
+      ></dotlottie-wc>
+    </div>
+    <div
+      class="min-h-screen h-[768px] slider overflow-hidden max-w-[1740px] mx-auto"
+    >
+      <div
+        class="absolute z-100 bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-4 bg-[#1b1b1b]/70"
+      >
+        <button
+          class="overlay-prev text-4xl text-white size-12 flex items-center justify-center"
+          aria-label="Previous Slide"
+        >
+          &#10094;
+        </button>
+        <div class="dots-container flex justify-center gap-4"></div>
+
+        <button
+          class="overlay-next text-4xl text-white size-12 flex items-center justify-center"
+          aria-label="Next Slide"
+        >
+          &#10095;
+        </button>
+      </div>
+
+      <div
+        class="min-h-screen h-[768px] flex flex-col items-center justify-center text-white bg-[#1B1B1B] relative z-10 overflow-hidden slide-wrapper is-current"
+      >
+        <div class="text-center">
+          <div class="text-2xl mb-8">
+            <span id="week-of">July 28, 2025</span>
+          </div>
+          <div class="text-9xl mb-8" id="client-name">Drexel Hamilton</div>
+          <div class="flex flex-col items-center justify-center gap-8">
+            <div
+              class="py-3 px-5 border border-white text-2xl rounded-full flex items-center gap-5"
+            >
+              <img src="/images/vector-9.svg" alt="" class="size-6" />Website
+              Intelligence Report
+            </div>
+          </div>
+        </div>
+        <img
+          src="/images/Horizontal Logo - White Large.svg"
+          alt="Moonvine Logo"
+          class="absolute z-10 top-8 left-1/2 -translate-x-1/2"
+        />
+        <img
+          src="/images/ellipse-3-13.svg"
+          alt=""
+          class="absolute left-0 -z-10 h-full"
+        />
+        <img
+          src="/images/ellipse-5-14.svg"
+          alt=""
+          class="absolute right-0 -z-10 h-full"
+        />
+      </div>
+      <div
+        class="min-h-screen h-[768px] flex flex-col items-center justify-center text-white bg-[#1B1B1B] slide-wrapper"
+      >
+        <div class="grid grid-cols-2 max-w-[1080px] gap-x-16">
+          <div>
+            <div>
+              <div class="text-3xl flex items-center gap-2">
+                <img src="/images/Icon.svg" class="size-6" alt="" />A Note on
+                Intelligence
+              </div>
+              <div class="text-8xl">Disclaimer</div>
+            </div>
+          </div>
+          <div>
+            <div class="text-2xl mt-16">
+              While all data in this report is real and sourced from commercial
+              APIs, the analysis and insights are AI-generated through a
+              combination of industry tools and North Street's proprietary
+              methodology.
+            </div>
+            <div class="text-2xl mt-4">AI can make mistakes.</div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="min-h-screen h-[768px] flex flex-col text-[#1B1B1B] bg-[#F2F3EB] slide-wrapper"
+      >
+        <div class="px-8 py-24">
+          <h2 class="text-8xl">Lift Off</h2>
+        </div>
+        <div class="p-8 grid grid-cols-2">
+          <div class="border-b border-[#1B1B1B] pb-14 mb-16 pr-4">
+            <h3 class="text-4xl mb-4">Biggest opportunity</h3>
+            <p class="text-2xl" id="lift-of-biggest-opportunity">
+              Monthly searches for "billy waugh" (you rank #47)
+            </p>
+          </div>
+          <div class="border-b border-[#1B1B1B] pb-14 mb-16 pl-4">
+            <h3 class="text-4xl mb-4">Authority signals</h3>
+            <p class="text-2xl" id="lift-of-authority-signals">
+              Bloomberg & CNBC mentions driving SEO authority
+            </p>
+          </div>
+          <div class="pr-4">
+            <h3 class="text-4xl mb-5">Brand Foundation</h3>
+            <p class="text-2xl" id="lift-of-brand-foundation">
+              Monthly searches for "billy waugh" (you rank #47)
+            </p>
+          </div>
+          <div class="pl-4">
+            <h3 class="text-4xl mb-5">Quick Win</h3>
+            <p class="text-2xl" id="lift-of-quick-win">
+              monthly searches for "drexel investment bank" (you rank #2 - easy
+              win)
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="min-h-screen h-[768px] grid grid-cols-2 slide-wrapper">
+        <div class="p-8 bg-[#1B1B1B] text-white flex flex-col justify-center">
+          <h2 class="text-7xl mb-8" id="brand-foundation">
+            Brand Foundation: Solid ✓
+          </h2>
+          <p class="text-2xl" id="brand-foundation-paragraph">
+            You rank #1 for "assured healthcare partners" and capture 74.65% of
+            your organic traffic through this branded term (exactly what we'd
+            expect from an established healthcare firm). Your brand presence is
+            locked down.
+          </p>
+        </div>
+        <div class="grid grid-rows-2 text-[#1b1b1b]">
+          <div class="p-8 bg-[#F2F3EB] flex flex-col justify-center">
+            <h3 class="text-4xl mb-5" id="seo-snapshot-1-title">
+              Healthcare Market Recognition
+            </h3>
+            <p class="text-lg" id="seo-snapshot-1-paragraph">
+              Beyond brand searches, you're gaining real market traction:
+              "national partners in healthcare" improved from #4 to #3, and
+              "collabrios health" sits at #3 with 140 searches. This shows
+              genuine industry recognition, not just brand awareness.
+            </p>
+          </div>
+          <div class="p-8 bg-[#FFBA20] flex flex-col justify-center">
+            <h3 class="text-4xl mb-5" id="seo-snapshot-2-title">
+              The Big Opportunity Sitting Right There
+            </h3>
+            <p class="text-lg" id="seo-snapshot-2-paragraph">
+              6,600 people search for "AHP" monthly - your core abbreviation -
+              but you're buried on page 3 at #21. This represents massive
+              untapped brand traffic that should be flowing directly to you with
+              a simple optimization.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="min-h-screen h-[768px] flex flex-col text-[#1B1B1B] bg-[#F2F3EB] slide-wrapper"
+      >
+        <div class="px-8 py-24 bg-[#FFBA20]">
+          <h2 class="text-8xl">Market Intelligence</h2>
+        </div>
+        <div class="p-8 grid grid-cols-2 items-center h-full grow gap-56">
+          <div class="">
+            <h3 class="text-4xl mb-4">Your Competitive Position</h3>
+            <p class="text-lg max-w-[500px]" id="your-competitive-position">
+              The CollabriOS Health launch generated substantial media coverage
+              across PR Newswire, Fox News affiliates, and CBS - this positions
+              you as a technology innovator in PACE programs. Your expertise
+              announcement in 2021 (CollabriOS formation) continues to build
+              authority in integrated healthcare infrastructure.
+            </p>
+          </div>
+          <div class="">
+            <h3 class="text-4xl mb-4">Industry Context</h3>
+            <p class="text-lg max-w-[500px]" id="industry-context">
+              PACE programs are expanding rapidly as Medicare Advantage
+              alternatives gain momentum. Your technology infrastructure angle
+              gives you a defensible market position in a relationship-driven
+              industry where tech differentiation is becoming critical.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="min-h-screen h-[768px] flex flex-col bg-[#1B1B1B] text-white slide slide-wrapper"
+      >
+        <div class="px-8 py-24">
+          <h2 class="text-8xl">Action Items</h2>
+        </div>
+        <div class="p-8 grid grid-cols-3 h-full grow gap-0">
+          <div class="">
+            <div class="text-5xl mb-8">01</div>
+            <div class="w-full h-[1px] bg-white mb-8"></div>
+            <h3 class="text-4xl mb-6" id="action-item-1-title">Quick Win</h3>
+            <p class="text-lg pr-8" id="action-item-1-paragraph">
+              Add "AHP" to your homepage title tag and H1 header. With 6,600
+              monthly searches and zero competition, you should easily climb
+              from #21 to top 5. Expected outcome: 200+ additional qualified
+              monthly visitors.
+            </p>
+          </div>
+          <div class="">
+            <div class="text-5xl mb-8">02</div>
+            <div class="w-full h-[1px] bg-white mb-8"></div>
+            <h3 class="text-4xl mb-6" id="action-item-2-title">Quick Win</h3>
+            <p class="text-lg pr-8" id="action-item-2-paragraph">
+              Add "AHP" to your homepage title tag and H1 header. With 6,600
+              monthly searches and zero competition, you should easily climb
+              from #21 to top 5. Expected outcome: 200+ additional qualified
+              monthly visitors.
+            </p>
+          </div>
+          <div class="">
+            <div class="text-5xl mb-8">03</div>
+            <div class="w-full h-[1px] bg-white mb-8"></div>
+            <h3 class="text-4xl mb-6" id="action-item-3-title">Quick Win</h3>
+            <p class="text-lg pr-8" id="action-item-3-paragraph">
+              Add "AHP" to your homepage title tag and H1 header. With 6,600
+              monthly searches and zero competition, you should easily climb
+              from #21 to top 5. Expected outcome: 200+ additional qualified
+              monthly visitors.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="min-h-screen h-[768px] flex flex-col bg-[#FFBA20] text-[#1b1b1b] slide-wrapper"
+      >
+        <div class="px-8 py-24">
+          <h2 class="text-8xl">Performance Metrics</h2>
+        </div>
+        <div
+          class="grid grid-cols-3 divide-x divide-[#1b1b1b] h-full grow border-t border-[#1b1b1b]"
+        >
+          <div class="p-8 flex flex-col gap-4">
+            <div
+              class="px-3 py-2 border border-[#1b1b1b] rounded-full mb-2 w-fit"
+              id="performance-1-title"
+            >
+              Your Search Performance
+            </div>
+            <p class="text-xl" id="performance-1-item-1">
+              Brand strength: 74.65% of traffic from primary branded term
+              (strong foundation)
+            </p>
+            <p class="text-xl" id="performance-1-item-2">
+              Brand strength: 74.65% of traffic from primary branded term
+              (strong foundation)
+            </p>
+            <p class="text-xl" id="performance-1-item-3">
+              Brand strength: 74.65% of traffic from primary branded term
+              (strong foundation)
+            </p>
+            <p class="text-xl" id="performance-1-item-4">
+              Brand strength: 74.65% of traffic from primary branded term
+              (strong foundation)
+            </p>
+          </div>
+          <div class="p-8 flex flex-col gap-2.5">
+            <div
+              class="px-3 py-2 border border-[#1b1b1b] rounded-full mb-2 w-fit"
+              id="performance-2-title"
+            >
+              Your Search Performance
+            </div>
+            <p class="text-xl" id="performance-2-item-1">
+              Brand strength: 74.65% of traffic from primary branded term
+              (strong foundation)
+            </p>
+            <p class="text-xl" id="performance-2-item-2">
+              Brand strength: 74.65% of traffic from primary branded term
+              (strong foundation)
+            </p>
+            <p class="text-xl" id="performance-2-item-3">
+              Brand strength: 74.65% of traffic from primary branded term
+              (strong foundation)
+            </p>
+            <p class="text-xl" id="performance-2-item-4">
+              Brand strength: 74.65% of traffic from primary branded term
+              (strong foundation)
+            </p>
+          </div>
+          <div class="p-8 flex flex-col gap-2">
+            <div
+              class="px-3 py-2 border border-[#1b1b1b] rounded-full mb-2 w-fit"
+              id="performance-3-title"
+            >
+              Your Search Performance
+            </div>
+            <p class="text-xl" id="performance-3-item-1">
+              Brand strength: 74.65% of traffic from primary branded term
+              (strong foundation)
+            </p>
+            <p class="text-xl" id="performance-3-item-2">
+              Brand strength: 74.65% of traffic from primary branded term
+              (strong foundation)
+            </p>
+            <p class="text-xl" id="performance-3-item-3">
+              Brand strength: 74.65% of traffic from primary branded term
+              (strong foundation)
+            </p>
+            <p class="text-xl" id="performance-3-item-4">
+              Brand strength: 74.65% of traffic from primary branded term
+              (strong foundation)
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="min-h-screen h-[768px] flex flex-col bg-[#1b1b1b] text-white slide-wrapper"
+      >
+        <div class="px-8 py-16 bg-white text-[#1b1b1b]">
+          <h2 class="text-8xl">Industry Update</h2>
+        </div>
+        <div class="h-full grow">
+          <div class="grid grid-cols-[340px_1fr] p-8 items-center gap-8">
+            <div
+              class="py-2 px-3 border border-white rounded-full w-fit"
+              id="industry-1-title"
+            >
+              This Week's Development
+            </div>
+            <p class="text-lg" id="industry-1-paragraph">
+              Healthcare AI startups captured 62% of venture capital funding in
+              2025 ($3.95 billion), with ambient documentation tools being
+              adopted faster than any healthcare technology in recent history,
+              according to [Peterson Health Technology
+              Institute](https://www.fiercehealthcare.com/health-tech/healthcare-ai-rakes-nearly-4b-vc-funding-buoying-digital-health-market-2025).
+              Adoption rates are reaching 30-40% across physician groups.
+            </p>
+          </div>
+          <div class="grid grid-cols-[340px_1fr] p-8 items-center gap-8">
+            <div
+              class="py-2 px-3 border border-white rounded-full w-fit"
+              id="industry-2-title"
+            >
+              This Week's Development
+            </div>
+            <p class="text-lg" id="industry-2-paragraph">
+              Healthcare AI startups captured 62% of venture capital funding in
+              2025 ($3.95 billion), with ambient documentation tools being
+              adopted faster than any healthcare technology in recent history,
+              according to [Peterson Health Technology
+              Institute](https://www.fiercehealthcare.com/health-tech/healthcare-ai-rakes-nearly-4b-vc-funding-buoying-digital-health-market-2025).
+              Adoption rates are reaching 30-40% across physician groups.
+            </p>
+          </div>
+          <div class="grid grid-cols-[340px_1fr] p-8 items-center gap-8">
+            <div
+              class="py-2 px-3 border border-white rounded-full w-fit"
+              id="industry-3-title"
+            >
+              This Week's Development
+            </div>
+            <p class="text-lg" id="industry-3-paragraph">
+              Healthcare AI startups captured 62% of venture capital funding in
+              2025 ($3.95 billion), with ambient documentation tools being
+              adopted faster than any healthcare technology in recent history,
+              according to [Peterson Health Technology
+              Institute](https://www.fiercehealthcare.com/health-tech/healthcare-ai-rakes-nearly-4b-vc-funding-buoying-digital-health-market-2025).
+              Adoption rates are reaching 30-40% across physician groups.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="min-h-screen h-[768px] flex flex-col items-center justify-center text-white bg-[#1B1B1B] relative z-10 overflow-hidden slide-wrapper"
+      >
+        <div class="text-center">
+          <img src="/images/Frame 204 1.png" alt="Moonvine Logo" class="" />
+
+          <div class="flex items-center justify-center gap-8 mt-20">
+            <div class="text-2xl flex items-center justify-center gap-2">
+              <img src="/images/Icon (1).svg" alt="Moonvine Logo" class="" />
+              moonvine.io
+            </div>
+            <div class="text-2xl flex items-center justify-center gap-2">
+              <img src="/images/Icon (2).svg" alt="Moonvine Logo" class="" />
+              moonvine.io
+            </div>
+          </div>
+        </div>
+
+        <img
+          src="/images/ellipse-3-13.svg"
+          alt=""
+          class="absolute left-0 -z-10 h-full"
+        />
+        <img
+          src="/images/ellipse-5-14.svg"
+          alt=""
+          class="absolute right-0 -z-10 h-full"
+        />
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="src/slides-script.js"></script>
+  </body>
+</html>
